@@ -8,235 +8,137 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-
-    :root {
-      --bg: #0f0f12;
-      --surface: #18181d;
-      --text: #e4e4e7;
-      --muted: #a1a1aa;
-      --accent: #a78bfa;
-      --border: #27272a;
-      --link: #a78bfa;
-      --link-hover: #c4b5fd;
-    }
-
-    html {
-      font-size: 18px;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.65;
-      color: var(--text);
-      background: var(--bg);
-      margin: 0;
-      padding: 2rem 1rem 4rem;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    h1 {
-      font-size: 1.85rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.5rem;
-      color: var(--text);
-    }
-
-    h2 {
-      font-size: 1.35rem;
-      font-weight: 600;
-      margin: 2.25rem 0 0.75rem;
-      padding-bottom: 0.35rem;
-      border-bottom: 1px solid var(--border);
-      color: var(--text);
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 1.5rem 0 0.5rem;
-      color: var(--text);
-    }
-
-    p {
-      margin: 0 0 1rem;
-      color: var(--muted);
-    }
-
-    strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--link-hover);
-      text-decoration: underline;
-    }
-
-    ul {
-      margin: 0 0 1rem;
-      padding-left: 1.5rem;
-      color: var(--muted);
-    }
-
-    li {
-      margin: 0.35rem 0;
-    }
-
-    li ul {
-      margin-top: 0.35rem;
-    }
-
-    .back {
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      color: var(--accent);
-      font-size: 0.95rem;
-    }
-
-    .back:hover {
-      color: var(--link-hover);
-    }
-
-    .content {
-      width: 100%;
-    }
-  </style>
+  * { box-sizing: border-box; }
+  :root {
+    --bg: #0f0f12;
+    --surface: #18181d;
+    --text: #e4e4e7;
+    --muted: #a1a1aa;
+    --accent: #a78bfa;
+    --accent-dim: #7c3aed;
+    --border: #27272a;
+    --link: #a78bfa;
+    --link-hover: #c4b5fd;
+  }
+  html { font-size: 18px; scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+    margin: 0;
+    padding: 2rem 1rem 4rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 2.25rem 0 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  h3 { font-size: 1.15rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: var(--text); }
+  p { margin: 0 0 1rem; color: var(--muted); }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { color: var(--link-hover); text-decoration: underline; }
+  ul, ol { margin: 0 0 1rem; padding-left: 1.5rem; color: var(--muted); }
+  li { margin: 0.25rem 0; }
+  li ul, li ol { margin: 0.25rem 0; }
+  hr { border: none; height: 1px; background: var(--border); margin: 2rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  th, td {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  th {
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 600;
+  }
+  td { color: var(--muted); }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  .meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem; }
+  .back { display: inline-block; margin-bottom: 1.5rem; color: var(--accent); font-size: 0.9rem; }
+  .back:hover { color: var(--link-hover); }
+</style>
 </head>
 <body>
   <a class="back" href="index.html">← All policies</a>
-
   <div class="content">
-    <h1>Privacy Policy – Muslim Companion</h1>
-    <p><strong>Effective date:</strong> January 21, 2026</p>
+<h1>Privacy Policy – Muslim Companion</h1>
+<p><strong>Effective date:</strong> January 21, 2026 · <strong>Last updated:</strong> March 2026</p>
+<p>Muslim Companion (&quot;the app&quot;) respects your privacy. This policy explains what data the app processes and why.</p>
+<h2>Information the app processes</h2>
+<ul>
+<li><strong>Location (optional):</strong> If you grant location permission, the app uses your approximate or precise location to determine your city, calculate prayer times, and show Qibla direction. You can also enter your city manually.</li>
+<li><strong>Notifications &amp; exact alarms:</strong> Used to deliver prayer reminders, Athan, optional morning/evening Azkar reminders, and the optional Spiritual Reminder (Azkar &amp; Quran every N days) at the times you choose.</li>
+<li><strong>Media / images (optional):</strong> If you use Image Studio, the app may access:<ul>
+<li>Camera (when you choose <strong>Take Photo</strong>)</li>
+<li>Photos you select via the system picker (when you choose <strong>Upload Image</strong>)</li>
+<li>Images you save to your device (when you tap <strong>Save</strong>)</li>
+</ul>
+</li>
+<li><strong>App settings:</strong> Stored on your device (language, calculation method, notification toggles, selected reciter, etc.).</li>
+<li><strong>AI features (optional):</strong> If you use <strong>Islamic Q&amp;A (Fatwa)</strong> or <strong>Dreams Interpreter</strong>, the text you submit (your question or dream description) is sent to our backend to generate a response. We do not use this content for advertising. Saved fatwa answers may be stored locally on your device.</li>
+</ul>
+<h2>Advertising</h2>
+<p>The app shows ads (banner and full-screen) from Google AdMob and, when used, Meta Audience Network. AdMob may collect data in accordance with <a href="https://policies.google.com/privacy">Google&#39;s Privacy Policy</a>; Meta may collect data in accordance with <a href="https://www.facebook.com/privacy/policy/">Meta&#39;s Privacy Policy</a>. We do not sell your personal data to advertisers. You can remove ads by upgrading to Premium (in-app purchase).</p>
+<h2>What the app does NOT do</h2>
+<ul>
+<li>No account creation or login (except optional Apple Sign-In for restoring in-app purchases, if used)</li>
+<li>No selling of personal data</li>
+<li>No collection of sensitive personal information beyond what&#39;s needed for enabled features</li>
+</ul>
+<h2>Data storage</h2>
+<ul>
+<li>Most data is stored locally on your device (settings and cached content).</li>
+<li>Downloaded content (Quran pages, audio, backgrounds) may be cached locally to improve performance.</li>
+<li>Home screen widgets (e.g. prayer times, Azkar) use data already on your device and do not collect additional data.</li>
+<li>In-app purchases are processed by Apple; we do not store your payment details.</li>
+</ul>
+<h2>Network access / third-party services</h2>
+<p>The app connects to the internet to provide features such as:</p>
+<ul>
+<li><strong>Prayer times:</strong> external API (e.g., Aladhan)</li>
+<li><strong>Qibla map tiles:</strong> OpenStreetMap tiles (in WebView)</li>
+<li><strong>Quran resources / backgrounds / reciter config:</strong> remote content (e.g., GitHub-hosted JSON/images) and reciter audio hosts</li>
+<li><strong>AI (Islamic Q&amp;A and Dreams):</strong> your questions and dream text are sent to our backend to provide answers; the service may log requests for security and operation.</li>
+<li><strong>Advertising:</strong> Google AdMob and Meta Audience Network (when used)</li>
+</ul>
+<p>These providers may receive standard technical information (e.g., IP address) during normal internet communication.</p>
+<h2>Permissions (why we ask)</h2>
+<ul>
+<li><strong>Location:</strong> prayer times &amp; Qibla based on your location  </li>
+<li><strong>Notifications:</strong> prayer reminders / Athan  </li>
+<li><strong>Exact alarms:</strong> trigger Athan at exact prayer time  </li>
+<li><strong>Camera:</strong> take a photo for Image Studio  </li>
+<li><strong>Photos:</strong> select images for Image Studio  </li>
+<li><strong>Internet / network state:</strong> fetch prayer times, resources, AI responses, and ads</li>
+</ul>
+<h2>Children&#39;s privacy</h2>
+<p>The app is not designed to collect personal information from children.</p>
+<h2>Changes to this policy</h2>
+<p>We may update this policy from time to time. The updated version will be posted at this URL.</p>
+<h2>Contact</h2>
+<p>For privacy questions or support: <strong><a href="mailto:App.MuslimCompanion@gmail.com">App.MuslimCompanion@gmail.com</a></strong><br>Developer: Amer Alkawareet</p>
 
-    <p>
-      Muslim Companion (“the app”) respects your privacy. This Privacy Policy explains what information the app processes,
-      how it is used, and the choices available to you.
-    </p>
-
-    <h2>Information the app processes</h2>
-    <ul>
-      <li>
-        <strong>Location (optional):</strong>
-        If you allow location access, the app uses your approximate or precise location to determine your city,
-        calculate prayer times, and show Qibla direction. You may also choose to enter your city manually instead.
-      </li>
-      <li>
-        <strong>Notifications (optional):</strong>
-        If you allow notifications, the app uses them to deliver prayer reminders and Athan alerts at the appropriate times.
-      </li>
-      <li>
-        <strong>Media / images (optional):</strong>
-        If you use Image Studio, the app may access:
-        <ul>
-          <li>Camera, when you choose <strong>Take Photo</strong></li>
-          <li>Photos you select through the system photo picker, when you choose <strong>Upload Image</strong></li>
-          <li>Images you choose to save to your device, when you tap <strong>Save</strong></li>
-        </ul>
-      </li>
-      <li>
-        <strong>App settings:</strong>
-        Preferences such as language, calculation method, notification options, selected reciter, theme,
-        and similar settings are stored locally on your device.
-      </li>
-    </ul>
-
-    <h2>Advertising</h2>
-    <p>
-      The app may display advertisements, including banner and full-screen ads, provided by Google AdMob.
-      AdMob may collect or use data such as device information, advertising identifiers, and usage data
-      in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.
-    </p>
-    <p>
-      We do not sell your personal data to advertisers. You may remove ads by upgrading to Premium through an in-app purchase, if offered.
-    </p>
-
-    <h2>What the app does not do</h2>
-    <ul>
-      <li>No required account creation or login to use the main features of the app</li>
-      <li>No sale of your personal data to third parties</li>
-      <li>No collection of sensitive personal information beyond what is needed for the features you choose to use</li>
-    </ul>
-
-    <h2>Data storage</h2>
-    <ul>
-      <li>Most app data, such as settings and cached content, is stored locally on your device.</li>
-      <li>Downloaded content, such as Quran pages, audio files, and backgrounds, may be cached locally to improve performance.</li>
-      <li>We do not store your payment card or billing details.</li>
-    </ul>
-
-    <h2>Network access / third-party services</h2>
-    <p>The app connects to the internet to provide features such as:</p>
-    <ul>
-      <li><strong>Prayer times:</strong> external API services such as Aladhan</li>
-      <li><strong>Qibla map tiles:</strong> OpenStreetMap tiles, where used</li>
-      <li><strong>Quran resources, backgrounds, and reciter configuration:</strong> remote content such as hosted JSON, images, and audio</li>
-      <li><strong>Advertising:</strong> Google AdMob</li>
-    </ul>
-    <p>
-      During normal internet communication, these services may receive standard technical information such as your IP address,
-      device type, and general request metadata.
-    </p>
-
-    <h2>In-App Purchases</h2>
-    <p>
-      Muslim Companion may offer optional Premium features through in-app purchases, such as removing advertisements.
-      Purchases are processed securely by Apple through your Apple ID using the App Store.
-      We do not store, process, or have access to your payment details.
-    </p>
-
-    <h2>Permissions (why we ask)</h2>
-    <ul>
-      <li><strong>Location:</strong> to calculate prayer times and show Qibla direction based on your location</li>
-      <li><strong>Notifications:</strong> to send prayer reminders and Athan alerts</li>
-      <li><strong>Camera:</strong> to take photos for Image Studio</li>
-      <li><strong>Photos:</strong> to select or save images for Image Studio</li>
-      <li><strong>Internet access:</strong> to retrieve prayer times, content, updates, and ads</li>
-    </ul>
-
-    <h2>Children’s privacy</h2>
-    <p>
-      The app is not intended to knowingly collect personal information from children.
-      If you believe a child has provided personal information through the app, please contact us so we can address the issue.
-    </p>
-
-    <h2>Terms of Use</h2>
-    <p>
-      If the app offers subscriptions, they automatically renew unless cancelled at least 24 hours before the end of the current billing period.
-      Your Apple ID account may be charged for renewal within 24 hours before the end of the current period.
-    </p>
-    <p>
-      You can manage or cancel subscriptions in your Apple ID account settings after purchase.
-    </p>
-    <p>
-      <strong>Terms of Use (EULA):</strong><br>
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
-        https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-      </a>
-    </p>
-
-    <h2>Changes to this policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. When we do, the updated version will be posted at this same URL,
-      and the effective date at the top of this page will be revised.
-    </p>
-
-    <h2>Contact</h2>
-    <p>
-      For privacy questions or support, contact:<br>
-      <strong><a href="mailto:app.muslimcompanion@gmail.com">app.muslimcompanion@gmail.com</a></strong><br>
-      Developer / Owner: Amer Alkawareet
-    </p>
   </div>
 </body>
 </html>
